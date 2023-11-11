@@ -1,6 +1,6 @@
 <template>
-    <div class>
-        This is my todo list app
+    <div>
+        Item list
     </div>
 </template>
 

@@ -1,5 +1,7 @@
 <template>
-    <h1>Welcome page from js</h1>
+    <div>
+        Item form
+    </div>
 </template>
 
 <script>
