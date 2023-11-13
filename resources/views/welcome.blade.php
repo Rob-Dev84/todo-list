@@ -33,7 +33,7 @@
             @endif
 
         
-            <div id="app"></div>
+        <div id="app"></div>
 
         {{-- @vite([
         'resources/css/app.css', 
