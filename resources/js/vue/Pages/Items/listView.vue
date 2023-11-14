@@ -3,7 +3,9 @@
         List view:
         <div v-for="(item, index) in items" :key="index">
             
-            <list-item :item="item"
+            <list-item 
+                :item="item"
+                v-on:itemchanged="$emit('reloadlist')"
                 class="bg-gray-200 mb-2 px-2"
             />
 

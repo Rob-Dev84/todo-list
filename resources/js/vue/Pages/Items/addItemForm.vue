@@ -35,7 +35,7 @@ export default {
     },
     methods: {
         addItem() {
-            if (this.item.name === '') {
+            if (this.item.name == '') {
                 return 'You need to provide a task';
             }
 

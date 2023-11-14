@@ -3,7 +3,10 @@
         <div class="">
             <h2 id="title" class="text-3xl py-4 px-10">Todo list</h2>
             <add-item-form />
-            <list-view :items="items" />
+            <list-view 
+                :items="items"
+                v-on:reloadlist="getList()"
+             />
 
         </div>
     </div>
@@ -24,7 +27,7 @@ export default {
         }
     },
     methods: {
-        getList () {
+        getList() {
             axios.get('api/items')
             .then( response => {
                 this.items = response.data
@@ -34,7 +37,7 @@ export default {
             })
         }
     },
-    created () {
+    created() {
         this.getList();
     }
 }
