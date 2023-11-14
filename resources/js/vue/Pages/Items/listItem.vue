@@ -2,8 +2,9 @@
     <div class="flex items-center">
         <input 
             type="checkbox" 
-            @chage="updateCheck()"
+            @change="updateCheck()"
             v-model="item.completed"
+            :checked="item.completed"
         />
         
         <span :class="[item.completed ? 'line-through' : '', 'ml-2 w-full']">
@@ -26,22 +27,16 @@ import axios from "axios";
 // import Button from "../../Components/Button.vue";
 
 export default {
-    // data() {
-    //     return {
-    //         item: {
-    //             completed: '',
-    //         }
-    //     }
-    // },
     props: ['item'],//is this the item objects
-    components: {
-        // CheckboxInput,
-        // Button
-    },
+    // components: {
+    //     // CheckboxInput,
+    //     // Button
+    // },
     methods: {
+
         updateCheck() {
             axios.put('api/item/' + this.item.id, {
-                item: this.item //we pass the entire item object
+                item: this.item, //we pass the entire item object
             })
             .then( response => {
                 if ( response.status == 200 ) {
@@ -62,7 +57,7 @@ export default {
             .catch( error => {
                 console.log( error );
             })
-        }
+        },
     }
 }
 </script>

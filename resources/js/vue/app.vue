@@ -2,7 +2,9 @@
     <div class="">
         <div class="">
             <h2 id="title" class="text-3xl py-4 px-10">Todo list</h2>
-            <add-item-form />
+            <add-item-form
+                v-on:reloadlist="getList()"
+            />
             <list-view 
                 :items="items"
                 v-on:reloadlist="getList()"
@@ -16,6 +18,7 @@
 import axios from 'axios';
 import addItemForm from './Pages/Items/addItemForm.vue';
 import listView from './Pages/Items/listView.vue';
+
 export default {
     components: {
         addItemForm,

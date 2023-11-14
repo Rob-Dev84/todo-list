@@ -36,15 +36,16 @@ export default {
     methods: {
         addItem() {
             if (this.item.name == '') {
-                return 'You need to provide a task';
+                return;
             }
 
             axios.post('api/item/store', {
                 item: this.item
             })
             .then( response => {
-                if ( response === 201) {
+                if ( response.status == 201) {
                     this.item.name = '';
+                    this.$emit('reloadlist');
                 }
             })
             .catch( error =>  {
