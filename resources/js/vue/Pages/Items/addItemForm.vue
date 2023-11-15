@@ -1,7 +1,6 @@
 <template>
     <div class="flex items-center">
         
-        <!-- <input type="text" v-model="item.name" /> -->
         <text-input 
             inputId="name"        
             v-model="item.name"

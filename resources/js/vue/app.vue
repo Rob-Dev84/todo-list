@@ -1,7 +1,7 @@
 <template>
     <div class="">
         <div class="">
-            <h2 id="title" class="text-3xl py-4 px-10">Todo list</h2>
+            <h2 id="title" class="text-3xl py-4 px-10 dark:text-white">Todo list</h2>
             <add-item-form
                 v-on:reloadlist="getList()"
             />

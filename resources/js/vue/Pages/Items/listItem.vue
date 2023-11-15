@@ -1,5 +1,5 @@
 <template>
-    <div class="flex items-center">
+    <div class="flex items-center rounded-lg py-1 dark:bg-gray-600 dark:text-white">
         <input 
             type="checkbox" 
             @change="updateCheck()"

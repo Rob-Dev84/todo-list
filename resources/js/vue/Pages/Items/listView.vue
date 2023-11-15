@@ -1,6 +1,6 @@
 <template>
     <div>
-        List view:
+        <span class="dark:text-white">List view:</span>
         <div v-for="(item, index) in items" :key="index">
             
             <list-item 
